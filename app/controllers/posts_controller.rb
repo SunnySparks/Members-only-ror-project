@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :authenticate_user!, except [:index]
+    before_action :authenticate_post!, except: [:index]
 
     def new
         @post = Post.new
@@ -11,5 +11,14 @@ class PostsController < ApplicationController
 
     def index
         @post = Post.new
+
+        if @post.save
+            redirect_to root_path
+          else
+            render :new
+          end
+    end
+
+    def show
     end
 end
