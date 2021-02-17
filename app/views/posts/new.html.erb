@@ -1,0 +1,10 @@
+<h1> Secret Clubhouse </h1>
+
+<%= form_for :post, url: posts_path do |f| %>
+    <div class="field">
+      <div class="control">
+      <%= f.text_field :post, label: "Tell the world...", input_html: { class: "textarea"}, wrapper: false, label_html: { class: "label"}, placeholder: "Spill the tea..." %>
+      </div>
+    </div>
+    <%= f.submit "Post about it" %>
+<% end %>
