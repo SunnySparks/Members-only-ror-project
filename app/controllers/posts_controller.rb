@@ -13,7 +13,7 @@ class PostsController < ApplicationController
         @post = Post.new
 
         if @post.save
-            redirect_to root_path
+            redirect_to 'index'
           else
             render :new
           end
