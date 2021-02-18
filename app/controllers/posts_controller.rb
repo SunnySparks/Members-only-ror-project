@@ -1,15 +1,16 @@
 class PostsController < ApplicationController
-    before_action :authenticate_post!, except: [:index]
+    before_action :authenticate_user!, except: [:index]
 
     def new
         @post = Post.new
     end
 
-    def create
+    def index
+        @post = Post.all.order("created_at DESC")
         @post = Post.new
     end
 
-    def index
+    def create
         @post = Post.new
 
         if @post.save
