@@ -14,9 +14,11 @@ class PostsController < ApplicationController
         @post = Post.new
 
         if @post.save
-            redirect_to 'index'
+            format.html { redirect_to 'index', notice: 'Post was successfully created.' }
+            #redirect_to 'index'
           else
-            render :new
+            format.html { render :new }
+            #render :new
           end
     end
 
