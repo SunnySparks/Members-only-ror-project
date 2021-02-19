@@ -2,7 +2,7 @@ class PostsController < ApplicationController
     before_action :authenticate_user!, except: [:index]
 
     def new
-        @post = Post.new
+        @post = current_user.posts.build
     end
 
     def index
@@ -11,14 +11,14 @@ class PostsController < ApplicationController
     end
 
     def create
-        @post = Post.new
+        @post = current_user.posts.build
 
         if @post.save
-            format.html { redirect_to 'index', notice: 'Post was successfully created.' }
-            #redirect_to 'index'
+            #format.html { redirect_to 'index', notice: 'Post was successfully created.' }
+            redirect_to 'index'
           else
-            format.html { render :new }
-            #render :new
+            #format.html { render :new }
+            render :new
           end
     end
 
