@@ -7,7 +7,6 @@ class PostsController < ApplicationController
 
     def index
         @post = Post.all.order("created_at DESC")
-        @post = Post.new
     end
 
     def create
@@ -26,6 +25,8 @@ class PostsController < ApplicationController
 
     def show
     end
+
+    private
 
     def post_params
         params.require(:post).permit(:body, :user_id)
