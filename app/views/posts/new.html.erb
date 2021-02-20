@@ -1,9 +1,10 @@
 <h1> Secret Clubhouse </h1>
+<h2> Create your secrets in this box </h2>
 
 <%= form_with model: @post, class: "form-signin" do |f| %>
     <div class="field">
       <div class="control">
-      <%= f.text_area(:post, placeholder: "Spill the tea...") %>
+      <%= f.text_area(:body, placeholder: "Spill the tea...") %>
       </div>
     </div>
     <%= f.submit "Post about it" %>
