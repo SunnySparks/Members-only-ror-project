@@ -23,6 +23,7 @@ In order to run the application
 * 4 - Then type: rails s in order to get the server up and running.
 * 5 - Go to your web browser and type the address http://localhost:3000/
 * 6 - If it's the first time you open the project inside your broswer, you will see an empty page, sign up in order to create your first secrets
+  
 * 7 - After you are logged in, you will be able to see and destroy your secrets and see the author's name, if you sign out you will be able to see only the secrets, not the authors' identities
 * 8 - Please remember that everything you read is top secret and it mustn't be spread out of the secret community ;)
 
