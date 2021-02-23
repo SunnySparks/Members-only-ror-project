@@ -19,7 +19,7 @@ In order to run the application
 * 1 - Make a clone of the repository: https://github.com/SunnySparks/Members-only-ror-project
 * 2 - Open the project directory with your code editor.
 * 3 - Open terminal, drag and drop the project's folder into it and hit enter
-* 4 - Install all devise gem by adding gem 'devise' to your gemfile. Then run bundle install in your terminal
+* 4 - Install devise gem by adding gem 'devise' to your gemfile. Then run bundle install in your terminal
 * 4 - Then type: rails s in order to get the server up and running.
 * 5 - Go to your web browser and type the address http://localhost:3000/
 * 6 - If it's the first time you open the project inside your broswer, you will see an empty page, sign up in order to create your first secrets
