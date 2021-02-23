@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1 or /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @post.username = current_user.username
   end
 
   # GET /posts/new
@@ -25,7 +26,8 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
-    @post.user_id = current_user
+    @post.user_id = current_user.id
+    @post.username = current_user.username
 
     respond_to do |format|
       if @post.save

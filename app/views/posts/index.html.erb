@@ -18,14 +18,10 @@
         <% if user_signed_in? %>
           <div>
           <% if user_signed_in? %>
-          
-
-            <%= render "posts/new"%>
-            <td><%= current_user.name %></td>
-            <td><%= current_user.username %></td>
-
-            </div>
+            <td><%= post.user_id %></td>
+            <td><%= post.username  %></td>
             <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </div>
           <% end %>
         <% end %>
       </tr>
