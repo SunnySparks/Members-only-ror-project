@@ -17,10 +17,16 @@
         <td><%= post.body %></td>
         <% if user_signed_in? %>
           <div>
+          <% if user_signed_in? %>
+          
+
+            <%= render "posts/new"%>
             <td><%= current_user.name %></td>
             <td><%= current_user.username %></td>
-          </div>
+
+            </div>
             <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
         <% end %>
       </tr>
     <% end %>
