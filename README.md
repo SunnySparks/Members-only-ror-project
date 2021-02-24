@@ -32,8 +32,8 @@ In order to run the application
 
 👤 **José Francisco**
 
-- GitHub: [@githubhandle](https://github.com/SunnySparks)
-- Twitter: [@twitterhandle](https://twitter.com/JosFranT6)
+- GitHub: [@SunnySpark](https://github.com/SunnySparks)
+- Twitter: [@JosfranT6](https://twitter.com/JosFranT6)
 
 
 
@@ -41,7 +41,7 @@ In order to run the application
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/SunnySparks/Members-only-ror-project/issues).
 
 ### Show your support
 
