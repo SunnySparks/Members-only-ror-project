@@ -17,14 +17,9 @@
         <td><%= post.body %></td>
         <% if user_signed_in? %>
           <div>
-          <% if user_signed_in? %>
             <td><%= post.user_id %></td>
             <td><%= post.username  %></td>
-            <% if post.user_id == current_user.id %>
-            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <% end %>
-            </div>
-          <% end %>
+          </div>
         <% end %>
       </tr>
     <% end %>

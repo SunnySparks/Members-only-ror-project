@@ -18817,3 +18817,234 @@ Completed 200 OK in 64ms (Views: 57.3ms | ActiveRecord: 0.4ms | Allocations: 580
 
   [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started DELETE "/users/sign_out" for ::1 at 2021-02-24 15:29:29 -0600
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 966ms (ActiveRecord: 13.8ms | Allocations: 11444)
+
+
+Started GET "/" for ::1 at 2021-02-24 15:29:33 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (10.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 874.3ms | Allocations: 4739)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2745.9ms | Allocations: 11530)
+Completed 200 OK in 6738ms (Views: 3961.0ms | ActiveRecord: 12.7ms | Allocations: 14153)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-24 15:30:32 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 17.0ms | Allocations: 653)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 281.0ms | Allocations: 3170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 376.3ms | Allocations: 6843)
+Completed 200 OK in 730ms (Views: 418.7ms | ActiveRecord: 0.0ms | Allocations: 10909)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-02-24 15:30:54 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sunny.epic@live.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "sunny.epic@live.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 689ms (ActiveRecord: 2.0ms | Allocations: 4382)
+
+
+Started GET "/" for ::1 at 2021-02-24 15:30:54 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 4999)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 5070)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.4ms | Allocations: 5458)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x007fd7cececf68>
+Did you mean?  posts_path
+               font_path
+               root_path):
+    21:             <td><%= post.user_id %></td>
+    22:             <td><%= post.username  %></td>
+    23:             <% if post.user_id == current_user.id %>
+    24:             <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    25:             <% end %>
+    26:             </div>
+    27:           <% end %>
+  
+app/views/posts/index.html.erb:24
+app/views/posts/index.html.erb:15
+Started POST "/__web_console/repl_sessions/83c0e8398cfc85bf1e07fad3a94a116e/trace" for ::1 at 2021-02-24 15:31:40 -0600
+Started POST "/__web_console/repl_sessions/83c0e8398cfc85bf1e07fad3a94a116e/trace" for ::1 at 2021-02-24 15:31:49 -0600
+Started POST "/__web_console/repl_sessions/83c0e8398cfc85bf1e07fad3a94a116e/trace" for ::1 at 2021-02-24 15:31:56 -0600
+Started GET "/" for ::1 at 2021-02-24 15:35:31 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 98.1ms | Allocations: 2127)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 382.0ms | Allocations: 6028)
+Completed 200 OK in 591ms (Views: 557.6ms | ActiveRecord: 3.7ms | Allocations: 7269)
+
+
+Started GET "/" for ::1 at 2021-02-24 15:42:20 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 47.5ms | Allocations: 2800)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 81.8ms | Allocations: 6694)
+Completed 200 OK in 108ms (Views: 94.6ms | ActiveRecord: 3.4ms | Allocations: 7923)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-02-24 15:57:28 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (18.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 120ms (ActiveRecord: 32.7ms | Allocations: 7811)
+
+
+Started GET "/" for ::1 at 2021-02-24 15:57:30 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 3635)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 7322)
+Completed 200 OK in 55ms (Views: 46.8ms | ActiveRecord: 0.7ms | Allocations: 8325)
+
+
+Started GET "/posts/new" for ::1 at 2021-02-24 15:57:33 -0600
+Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-24 15:57:33 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 9.8ms | Allocations: 575)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1976)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 5715)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 7281)
+
+
+Started GET "/" for ::1 at 2021-02-24 16:00:34 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 432.0ms | Allocations: 4953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 763.1ms | Allocations: 8614)
+Completed 200 OK in 844ms (Views: 797.0ms | ActiveRecord: 12.8ms | Allocations: 9586)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-24 16:01:51 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 45.9ms | Allocations: 1097)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 349.8ms | Allocations: 4792)
+Completed 200 OK in 545ms (Views: 400.4ms | ActiveRecord: 27.9ms | Allocations: 10714)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-02-24 16:01:57 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Josediazt6@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (47.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "josediazt6@outlook.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 3203ms (ActiveRecord: 47.4ms | Allocations: 3403)
+
+
+Started GET "/posts/new" for ::1 at 2021-02-24 16:02:00 -0600
+Processing by PostsController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 60.3ms | Allocations: 1024)
+  Rendered posts/new.html.erb within layouts/application (Duration: 69.5ms | Allocations: 1377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 1012.9ms | Allocations: 5079)
+Completed 200 OK in 1060ms (Views: 1014.0ms | ActiveRecord: 1.2ms | Allocations: 7774)
+
+
+Started POST "/posts" for ::1 at 2021-02-24 16:02:12 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"body"=>"the_post"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `block in create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `block in create'
+  [1m[36mPost Create (13.8ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at", "body", "user_id", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2021-02-24 22:02:12.622182"], ["updated_at", "2021-02-24 22:02:12.622182"], ["body", "the_post"], ["user_id", 1], ["username", "SunnyDi"]]
+  ↳ app/controllers/posts_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 1632ms (ActiveRecord: 17.6ms | Allocations: 13125)
+
+
+Started GET "/" for ::1 at 2021-02-24 16:02:13 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 117.3ms | Allocations: 5380)
+Completed 200 OK in 330ms (Views: 240.8ms | ActiveRecord: 0.8ms | Allocations: 6060)
+
+
+Started GET "/" for ::1 at 2021-02-24 16:09:43 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 410.8ms | Allocations: 10021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 478.5ms | Allocations: 13682)
+Completed 200 OK in 490ms (Views: 483.7ms | ActiveRecord: 3.0ms | Allocations: 14668)
+
+
