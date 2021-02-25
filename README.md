@@ -16,7 +16,7 @@ This application is built in Ruby and Ruby on Rails. With Members-only app, you 
 
 In order to run the application 
 
-* 1 - Make a clone of the repository: https://github.com/SunnySparks/Members-only-ror-project
+* 1 - Make a clone of the repository: https://github.com/SunnySparks/Members-only-ror-project ![clone](img/Clone.png)
 * 2 - Open the project directory with your code editor.
 * 3 - Open terminal, drag and drop the project's folder into it and hit enter
 * 4 - Run bundle install in your terminal
