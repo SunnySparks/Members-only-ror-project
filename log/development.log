@@ -19230,3 +19230,191 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms | Allocations: 5020)
 
 
+Started GET "/" for ::1 at 2021-02-25 11:26:14 -0600
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 57.5ms | Allocations: 5056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 173.3ms | Allocations: 11396)
+Completed 200 OK in 377ms (Views: 185.1ms | ActiveRecord: 1.8ms | Allocations: 14965)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 11:26:16 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/users/sign_in" for ::1 at 2021-02-25 11:26:22 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 650)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 47.0ms | Allocations: 5002)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.6ms | Allocations: 8702)
+Completed 200 OK in 127ms (Views: 80.0ms | ActiveRecord: 1.3ms | Allocations: 15885)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 11:26:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-02-25 11:26:29 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Josediazt6@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "josediazt6@outlook.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1468ms (ActiveRecord: 13.3ms | Allocations: 4495)
+
+
+Started GET "/" for ::1 at 2021-02-25 11:26:30 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 64.3ms | Allocations: 1722)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 142.1ms | Allocations: 5410)
+Completed 200 OK in 148ms (Views: 143.7ms | ActiveRecord: 0.9ms | Allocations: 5817)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 11:26:31 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/users/sign_out" for ::1 at 2021-02-25 11:26:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2021-02-25 11:33:47 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 74.4ms | Allocations: 9969)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 99.7ms | Allocations: 13628)
+Completed 200 OK in 111ms (Views: 103.1ms | ActiveRecord: 3.3ms | Allocations: 14607)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 11:33:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/" for ::1 at 2021-02-25 11:33:51 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 5367)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.6ms | Allocations: 5775)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 11:33:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/users/sign_out" for ::1 at 2021-02-25 11:33:54 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms | Allocations: 2349)
+
+
+Started GET "/" for ::1 at 2021-02-25 11:33:54 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4621)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms | Allocations: 5024)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 11:33:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/users/sign_in" for ::1 at 2021-02-25 11:33:57 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1097)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 4832)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 5554)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 11:33:57 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-02-25 11:33:59 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Josediazt6@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "josediazt6@outlook.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 510ms (ActiveRecord: 1.0ms | Allocations: 2326)
+
+
+Started GET "/" for ::1 at 2021-02-25 11:34:00 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1680)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5361)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.4ms | Allocations: 5766)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 11:34:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/users/sign_out" for ::1 at 2021-02-25 11:35:40 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms (ActiveRecord: 1.0ms | Allocations: 1686)
+
+
+Started GET "/" for ::1 at 2021-02-25 11:35:40 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 930)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.8ms | Allocations: 4612)
+Completed 200 OK in 88ms (Views: 85.7ms | ActiveRecord: 0.2ms | Allocations: 5015)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 11:35:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
