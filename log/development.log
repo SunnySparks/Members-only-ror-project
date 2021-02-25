@@ -19418,3 +19418,663 @@ Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-2
   
 ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
   
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPost Destroy (4.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[36mPost Load (4.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPost Destroy (1.7ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  [1m[36mPost Destroy (1.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-02-25 14:08:12 -0600
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 109.0ms | Allocations: 1452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 448.5ms | Allocations: 7792)
+Completed 200 OK in 1105ms (Views: 471.3ms | ActiveRecord: 0.4ms | Allocations: 11365)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:08:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/users/sign_in" for ::1 at 2021-02-25 14:14:40 -0600
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 650)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 116.4ms | Allocations: 5004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 201.2ms | Allocations: 8704)
+Completed 200 OK in 402ms (Views: 213.1ms | ActiveRecord: 14.6ms | Allocations: 17189)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:14:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-02-25 14:14:44 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Josediazt6@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "josediazt6@outlook.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 662ms (ActiveRecord: 1.2ms | Allocations: 4499)
+
+
+Started GET "/" for ::1 at 2021-02-25 14:14:45 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:32
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1674)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 5362)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.6ms | Allocations: 5769)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:14:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/posts/new" for ::1 at 2021-02-25 14:14:49 -0600
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 37.4ms | Allocations: 1020)
+  Rendered posts/new.html.erb within layouts/application (Duration: 41.1ms | Allocations: 1373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 5060)
+Completed 200 OK in 139ms (Views: 77.2ms | ActiveRecord: 1.4ms | Allocations: 9866)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:14:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started POST "/posts" for ::1 at 2021-02-25 14:15:07 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"body"=>"Louis doesn't like to shower after he goes to the gym"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+  [1m[36mPost Create (3.0ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at", "body", "user_id", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2021-02-25 20:15:07.705207"], ["updated_at", "2021-02-25 20:15:07.705207"], ["body", "Louis doesn't like to shower after he goes to the gym"], ["user_id", 1], ["username", "SunnyDi"]]
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 92ms (ActiveRecord: 4.8ms | Allocations: 6731)
+
+
+Started GET "/" for ::1 at 2021-02-25 14:15:07 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 1660)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 85.4ms | Allocations: 5337)
+Completed 200 OK in 88ms (Views: 85.8ms | ActiveRecord: 0.4ms | Allocations: 5747)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:15:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/" for ::1 at 2021-02-25 14:15:46 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 117.3ms | Allocations: 4995)
+  Rendered layout layouts/application.html.erb (Duration: 117.8ms | Allocations: 5065)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 1.6ms | Allocations: 6293)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Post:0x00007febda37bce8>):
+    17:         <td><%= post.body %></td>
+    18:         <% if user_signed_in? %>
+    19:           <div>
+    20:             <td><%= post.name %></td>
+    21:             <td><%= post.username  %></td>
+    22:           </div>
+    23:         <% end %>
+  
+app/views/posts/index.html.erb:20
+app/views/posts/index.html.erb:15
+Started GET "/" for ::1 at 2021-02-25 14:16:00 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2038)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 5933)
+Completed 200 OK in 75ms (Views: 69.7ms | ActiveRecord: 0.4ms | Allocations: 7173)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:16:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/" for ::1 at 2021-02-25 14:16:19 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1405)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1477)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2705)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Welcome to the house of secrets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>All the secrets are down below</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <div>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.body %></td>
+        <% if user_signed_in? %>
+          <div>
+            <td><%= "By:", post.username  %></td>
+          </div>
+        <% end %>
+      </tr>
+    <% end %>
+  </div>
+  </tbody>
+</table>
+
+<br>
+      <div class="index-header-logged-in">
+      <% if user_signed_in? %>
+        <li>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+        </li>
+      <% else %>
+        <li>
+        <%= link_to('Login', new_user_session_path) %> 
+        <%= link_to('Sign up', new_user_registration_path) %>  
+        </li>
+      <% end %>
+      </div>
+      
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Welcome to the house of secrets</h1>
+4:    
+5:    <table>
+6:      <thead>
+7:        <tr>
+8:          <th>All the secrets are down below</th>
+9:          <th colspan="3"></th>
+10:        </tr>
+11:      </thead>
+12:    
+13:      <tbody>
+14:      <div>
+15:        <% @posts.each do |post| %>
+16:          <tr>
+17:            <td><%= post.body %></td>
+18:            <% if user_signed_in? %>
+19:              <div>
+20:                <td><%= "By:", post.username  %></td>
+21:              </div>
+22:            <% end %>
+23:          </tr>
+24:        <% end %>
+25:      </div>
+26:      </tbody>
+27:    </table>
+28:    
+29:    <br>
+30:          <div class="index-header-logged-in">
+31:          <% if user_signed_in? %>
+32:            <li>
+33:            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+34:            </li>
+35:          <% else %>
+36:            <li>
+37:            <%= link_to('Login', new_user_session_path) %> 
+38:            <%= link_to('Sign up', new_user_registration_path) %>  
+39:            </li>
+40:          <% end %>
+41:          </div>
+42:          
+43:    <% if user_signed_in? %>
+44:      <%= link_to 'New Post', new_post_path %>
+45:    <% end %>
+  
+app/views/posts/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+Started GET "/" for ::1 at 2021-02-25 14:16:52 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1416)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1487)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms | Allocations: 2705)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Welcome to the house of secrets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>All the secrets are down below</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <div>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.body %></td>
+        <% if user_signed_in? %>
+          <div>
+            <td><%= By:  %></td>
+            <td><%= post.username  %></td>
+          </div>
+        <% end %>
+      </tr>
+    <% end %>
+  </div>
+  </tbody>
+</table>
+
+<br>
+      <div class="index-header-logged-in">
+      <% if user_signed_in? %>
+        <li>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+        </li>
+      <% else %>
+        <li>
+        <%= link_to('Login', new_user_session_path) %> 
+        <%= link_to('Sign up', new_user_registration_path) %>  
+        </li>
+      <% end %>
+      </div>
+      
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Welcome to the house of secrets</h1>
+4:    
+5:    <table>
+6:      <thead>
+7:        <tr>
+8:          <th>All the secrets are down below</th>
+9:          <th colspan="3"></th>
+10:        </tr>
+11:      </thead>
+12:    
+13:      <tbody>
+14:      <div>
+15:        <% @posts.each do |post| %>
+16:          <tr>
+17:            <td><%= post.body %></td>
+18:            <% if user_signed_in? %>
+19:              <div>
+20:                <td><%= By:  %></td>
+21:                <td><%= post.username  %></td>
+22:              </div>
+23:            <% end %>
+24:          </tr>
+25:        <% end %>
+26:      </div>
+27:      </tbody>
+28:    </table>
+29:    
+30:    <br>
+31:          <div class="index-header-logged-in">
+32:          <% if user_signed_in? %>
+33:            <li>
+34:            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+35:            </li>
+36:          <% else %>
+37:            <li>
+38:            <%= link_to('Login', new_user_session_path) %> 
+39:            <%= link_to('Sign up', new_user_registration_path) %>  
+40:            </li>
+41:          <% end %>
+42:          </div>
+43:          
+44:    <% if user_signed_in? %>
+45:      <%= link_to 'New Post', new_post_path %>
+46:    <% end %>
+  
+app/views/posts/index.html.erb:20: syntax error, unexpected tLABEL
+app/views/posts/index.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:25: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected tLABEL
+app/views/posts/index.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:25: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected tLABEL
+app/views/posts/index.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:25: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected tLABEL
+app/views/posts/index.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:25: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected tLABEL
+app/views/posts/index.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:25: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:20: syntax error, unexpected tLABEL
+app/views/posts/index.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:25: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:48: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2021-02-25 14:17:12 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 2057)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 5952)
+Completed 200 OK in 70ms (Views: 66.3ms | ActiveRecord: 1.5ms | Allocations: 7189)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:17:12 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/posts/new" for ::1 at 2021-02-25 14:17:26 -0600
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.9ms | Allocations: 806)
+  Rendered posts/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 4843)
+Completed 200 OK in 50ms (Views: 38.3ms | ActiveRecord: 0.4ms | Allocations: 6479)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:17:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/posts" for ::1 at 2021-02-25 14:18:20 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (17.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 142.9ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 295.3ms | Allocations: 5322)
+Completed 200 OK in 355ms (Views: 312.8ms | ActiveRecord: 17.4ms | Allocations: 5722)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:18:20 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/users/sign_out" for ::1 at 2021-02-25 14:18:23 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 145ms (ActiveRecord: 0.3ms | Allocations: 4347)
+
+
+Started GET "/" for ::1 at 2021-02-25 14:18:23 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 320.2ms | Allocations: 863)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 380.1ms | Allocations: 4549)
+Completed 200 OK in 386ms (Views: 382.1ms | ActiveRecord: 0.3ms | Allocations: 4951)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:18:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/users/sign_in" for ::1 at 2021-02-25 14:18:27 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 560)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1870)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 5607)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.0ms | Allocations: 7132)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:18:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-02-25 14:18:41 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sunny.epic.@live.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "sunny.epic.@live.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 14ms (ActiveRecord: 4.4ms | Allocations: 1446)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sunny.epic.@live.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1024)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 4768)
+Completed 200 OK in 638ms (Views: 54.3ms | ActiveRecord: 0.0ms | Allocations: 5314)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:18:42 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-02-25 14:20:30 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sunny.epic.@live.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "sunny.epic.@live.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 86ms (ActiveRecord: 11.5ms | Allocations: 1446)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sunny.epic.@live.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1019)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 187.1ms | Allocations: 4764)
+Completed 200 OK in 672ms (Views: 197.0ms | ActiveRecord: 0.0ms | Allocations: 5306)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:20:31 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-02-25 14:20:40 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sunny.epic.@live.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "sunny.epic.@live.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 36ms (ActiveRecord: 1.3ms | Allocations: 1455)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sunny.epic.@live.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1019)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 4763)
+Completed 200 OK in 648ms (Views: 52.6ms | ActiveRecord: 0.0ms | Allocations: 5306)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:20:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users/sign_in" for ::1 at 2021-02-25 14:21:05 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sunny.epic@live.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "sunny.epic@live.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (75.9ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2021-02-25 20:21:06.669898"], ["updated_at", "2021-02-25 20:21:06.671919"], ["id", 2]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1152ms (ActiveRecord: 80.7ms | Allocations: 10714)
+
+
+Started GET "/" for ::1 at 2021-02-25 14:21:07 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 1654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 459.9ms | Allocations: 5344)
+Completed 200 OK in 464ms (Views: 461.4ms | ActiveRecord: 0.5ms | Allocations: 5750)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:21:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/posts/new" for ::1 at 2021-02-25 14:21:14 -0600
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 7.8ms | Allocations: 514)
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 624)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 4309)
+Completed 200 OK in 51ms (Views: 42.4ms | ActiveRecord: 1.1ms | Allocations: 5816)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:21:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started POST "/posts" for ::1 at 2021-02-25 14:21:34 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"body"=>"Karina got married last year and she has an affair already."}, "commit"=>"Create Post"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at", "body", "user_id", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2021-02-25 20:21:34.403184"], ["updated_at", "2021-02-25 20:21:34.403184"], ["body", "Karina got married last year and she has an affair already."], ["user_id", 2], ["username", "K_Gretchen"]]
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 3.9ms | Allocations: 4598)
+
+
+Started GET "/" for ::1 at 2021-02-25 14:21:34 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1667)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 5343)
+Completed 200 OK in 62ms (Views: 56.5ms | ActiveRecord: 0.5ms | Allocations: 5750)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:21:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
+Started GET "/users/sign_out" for ::1 at 2021-02-25 14:21:52 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2021-02-25 20:21:52.311840"], ["id", 2]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 54ms (ActiveRecord: 2.6ms | Allocations: 4805)
+
+
+Started GET "/" for ::1 at 2021-02-25 14:21:52 -0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 897)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 135.1ms | Allocations: 4738)
+Completed 200 OK in 142ms (Views: 140.1ms | ActiveRecord: 0.4ms | Allocations: 5139)
+
+
+Started GET "/packs/js/application-b43fa54005da8e229d8c.js" for ::1 at 2021-02-25 14:21:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-b43fa54005da8e229d8c.js"):
+  
