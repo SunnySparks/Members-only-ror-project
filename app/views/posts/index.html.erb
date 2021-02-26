@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Welcome to the house of secrets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>All the secrets are down below</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <div>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.body %></td>
+        <% if user_signed_in? %>
+          <div>
+            <td><%= "By:"  %></td>
+            <td><%= post.username  %></td>
+          </div>
+        <% end %>
+      </tr>
+    <% end %>
+  </div>
+  </tbody>
+</table>
+
+<br>
+      <div class="index-header-logged-in">
+      <% if user_signed_in? %>
+        <li>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+        </li>
+      <% else %>
+        <li>
+        <%= link_to('Login', new_user_session_path) %> 
+        <%= link_to('Sign up', new_user_registration_path) %>  
+        </li>
+      <% end %>
+      </div>
+      
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>
